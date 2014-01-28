@@ -1,0 +1,14 @@
+{% if session %}
+	Helloz! {{ session.usr }}
+
+	<form action='index.php?page=product&action=newProduct' method='POST'>
+	<p>New product</p></p>
+	<ul>
+		 <li><input type=text name=pname value='Name'></li>
+		 <li>Price:<br /><input type=text name=price value=123> </li>
+		<li>Category Id:<br /><input type=text name=cid value=1> </li>
+
+	</ul>
+	<input type=submit>
+	</form>
+{% endif %}

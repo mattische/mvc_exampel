@@ -1,0 +1,8 @@
+{% for value in cat%}
+
+<p><b>{{ value.name }} </b> is nice catsegory</p>
+<p>It's haz some products in it:</p>
+<a href=index.php?page=product&action=showAllByCatId&cid={{ value.id }}>view them</a>
+
+
+{% endfor %}

@@ -1,0 +1,6 @@
+<h2>Products:</h2>
+<ul>
+{% for value in products %}
+	 <li><a href='index.php?page=product&action=showProduct&pid={{ value.id }}'>	{{ value.name }}	</a></li>
+{% endfor %}
+</ul>

@@ -1,0 +1,6 @@
+<h2>Categories:</h2>
+<ul>
+{% for value in cats %}
+	 <li><a href='index.php?page=category&action=showCategory&cid={{ value.id }}'>	{{ value.name }}	</a></li>
+{% endfor %}
+</ul>

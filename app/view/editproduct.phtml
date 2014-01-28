@@ -1,0 +1,20 @@
+{% if session %}
+	Helloz! {{ session.usr }}
+
+	<form action='index.php?page=product&action=edit' method='POST'>
+	{% for value in product %}
+
+	<p>Change props for {{value.name}} (id: {{value.id}})</p></p>
+	<ul>
+		 <li>Name: <input type=text name=pname value='{{value.name}}'></li>
+		<input type=hidden name=pid value={{value.id}}>
+		 <li>Price: <input type=text name=price value={{value.price}}> </li>
+
+	</ul>
+	<a href=index.php?page=product&action=delete&pid={{value.id}}>Deletes it!</a>
+	{% endfor %}
+	<input type=submit> 
+	</form>
+{% endif %}
+
+<a href=index.php?page=product&action=newproduct>New product</a>
